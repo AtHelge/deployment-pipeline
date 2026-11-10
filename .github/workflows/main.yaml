@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    context: ./express-app
 
     steps:
     - name: Checkout repository
@@ -28,3 +29,5 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/express-app:latest
+
+  
